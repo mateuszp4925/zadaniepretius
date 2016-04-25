@@ -28,7 +28,7 @@ public class Main {
 
                 if (map.containsKey("amount")) {
                     String stringValue = map.get("amount");
-                    double value = Double.parseDouble(stringValue.substring(0, stringValue.length() - 3).replaceAll(",", "."));
+                    double value = Double.parseDouble(stringValue.replaceAll("PLN", "").replaceAll(",", "."));
                     sum += value;
                 }
                 line = file.readLine();
